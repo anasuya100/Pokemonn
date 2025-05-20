@@ -31,7 +31,7 @@ function App() {
         </div>
       </div>
       
-      <main className="container mx-auto pt-40 pb-8">
+      <main className="container mx-auto px-6 pt-40 pb-8">
         <PokemonGrid 
           pokemon={pokemon}
           isLoading={isLoading}
