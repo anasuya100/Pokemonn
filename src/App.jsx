@@ -19,11 +19,9 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gradient-to-l from-neutral-50 to-neutral-150">
-      <Header />
-      
-      <main className="container mx-auto px-4 py-8">
-        <div className="flex flex-col md:flex-row justify-between items-center mb-8 gap-4">
-          <h2 className="text-xl font-bold text-gray-800">Back To Childhood</h2>
+      <div className="fixed top-0 left-0 right-0 z-20 bg-white">
+        <Header />
+        <div className="container mx-auto px-4 py-4">
           <SearchFilters 
             searchTerm={searchTerm}
             selectedType={selectedType}
@@ -31,7 +29,9 @@ function App() {
             onTypeChange={setSelectedType}
           />
         </div>
-        
+      </div>
+      
+      <main className="container mx-auto pt-40 pb-8">
         <PokemonGrid 
           pokemon={pokemon}
           isLoading={isLoading}
